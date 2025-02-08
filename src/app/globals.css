@@ -4,27 +4,57 @@
 
 /* Light Theme (Default) */
 :root {
-  --bg-color: theme("colors.light.background");
-  --text-color: theme("colors.light.text");
-  --primary-color: theme("colors.light.primary");
-  --secondary-color: theme("colors.light.secondary");
-  --border-color: theme("colors.light.border");
-  --card-bg-color: theme("colors.light.card");
+  --bg-color: 255, 255, 255; /* Light background */
+  --fg-color: 0, 0, 0; /* Light text */
+  --primary-color: 98, 0, 238; /* Light primary */
+  --secondary-color: 3, 218, 198; /* Light secondary */
+  --border-color: 224, 224, 224; /* Light border */
+  --card-bg-color: 245, 245, 245; /* Light card background */
+  --hover-color: 55, 0, 179; /* Light hover */
+  --focus-color: 187, 134, 252; /* Light focus */
+  --active-color: 1, 135, 134; /* Light active */
+  --selected-color: 3, 218, 198; /* Light selected */
+  --error-color: 176, 0, 32; /* Light error */
+  --success-color: 76, 175, 80; /* Light success */
+  --warning-color: 255, 152, 0; /* Light warning */
+  --info-color: 33, 150, 243; /* Light info */
+  --link-color: 25, 118, 210; /* Light link */
+  --visited-link-color: 123, 31, 162; /* Light visited link */
+  --icon-color: 0, 0, 0; /* Light icon */
+  --disabled-text-color: 158, 158, 158; /* Light disabled text */
+  --disabled-icon-color: 158, 158, 158; /* Light disabled icon */
+  --overlay-color: 0, 0, 0, 0.5; /* Light overlay */
+  --shadow-color: 0, 0, 0, 0.3; /* Light shadow */
 }
 
 /* Dark Theme */
 [data-theme="dark"] {
-  --bg-color: theme("colors.dark.background");
-  --text-color: theme("colors.dark.text");
-  --primary-color: theme("colors.dark.primary");
-  --secondary-color: theme("colors.dark.secondary");
-  --border-color: theme("colors.dark.border");
-  --card-bg-color: theme("colors.dark.card");
+  --bg-color: 18, 18, 18; /* Dark background */
+  --fg-color: 255, 255, 255; /* Dark text */
+  --primary-color: 187, 134, 252; /* Dark primary */
+  --secondary-color: 3, 218, 198; /* Dark secondary */
+  --border-color: 51, 51, 51; /* Dark border */
+  --card-bg-color: 30, 30, 30; /* Dark card background */
+  --hover-color: 55, 0, 179; /* Dark hover */
+  --focus-color: 187, 134, 252; /* Dark focus */
+  --active-color: 1, 135, 134; /* Dark active */
+  --selected-color: 3, 218, 198; /* Dark selected */
+  --error-color: 207, 102, 121; /* Dark error */
+  --success-color: 76, 175, 80; /* Dark success */
+  --warning-color: 255, 152, 0; /* Dark warning */
+  --info-color: 33, 150, 243; /* Dark info */
+  --link-color: 187, 134, 252; /* Dark link */
+  --visited-link-color: 123, 31, 162; /* Dark visited link */
+  --icon-color: 255, 255, 255; /* Dark icon */
+  --disabled-text-color: 117, 117, 117; /* Dark disabled text */
+  --disabled-icon-color: 117, 117, 117; /* Dark disabled icon */
+  --overlay-color: 255, 255, 255, 0.1; /* Dark overlay */
+  --shadow-color: 0, 0, 0, 0.5; /* Dark shadow */
 }
 
 /* Apply Theme Variables */
 body {
   @apply transition-colors duration-300;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: rgba(var(--bg-color), 1);
+  color: rgba(var(--fg-color), 1);
 }

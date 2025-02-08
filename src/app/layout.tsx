@@ -6,6 +6,7 @@ import ThemeProvider from "@/theme/ThemeContext";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,15 +32,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Providers>
         <ThemeProvider>
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} grid min-h-screen grid-cols-1 md:grid-cols-[280px,1fr]`}
-          >
+          <body className={`${geistSans.variable} ${geistMono.variable} flex h-screen w-screen`}>
             <Sidebar />
-            <main className="relative flex flex-col">
+            <main className="flex-1 flex flex-col md:ml-40 lg:ml-64">
               <Header />
-              <div className="flex-1 overflow-auto">{children}</div>
+              <div className="flex-1 overflow-auto p-4">{children}</div>
             </main>
-            <BottomNav/>
+            <BottomNav />
           </body>
         </ThemeProvider>
       </Providers>
