@@ -2,20 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light Theme (Default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: theme("colors.light.background");
+  --text-color: theme("colors.light.text");
+  --primary-color: theme("colors.light.primary");
+  --secondary-color: theme("colors.light.secondary");
+  --border-color: theme("colors.light.border");
+  --card-bg-color: theme("colors.light.card");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-color: theme("colors.dark.background");
+  --text-color: theme("colors.dark.text");
+  --primary-color: theme("colors.dark.primary");
+  --secondary-color: theme("colors.dark.secondary");
+  --border-color: theme("colors.dark.border");
+  --card-bg-color: theme("colors.dark.card");
 }
 
+/* Apply Theme Variables */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply transition-colors duration-300;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
