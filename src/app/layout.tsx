@@ -34,10 +34,13 @@ export default function RootLayout({
         <ThemeProvider>
           <body className={`${geistSans.variable} ${geistMono.variable} flex h-screen w-screen`}>
             <Sidebar />
-            <main className="flex-1 flex flex-col md:ml-40 lg:ml-64">
+            <div className=" flex flex-col md:ml-40 lg:ml-64">
               <Header />
-              <div className="flex-1 overflow-auto p-4">{children}</div>
-            </main>
+              <div className="flex-1 w-screen md:max-w-[calc(100vw-10rem)] lg:max-w-[calc(100vw-16rem)]">
+  {children}
+</div>
+
+            </div>
             <BottomNav />
           </body>
         </ThemeProvider>
